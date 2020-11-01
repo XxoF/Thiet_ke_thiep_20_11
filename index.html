@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+	</title>
+	<style>
+		body {
+		  width: 100%;
+		  height: 85vh;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  perspective: 1200px;
+		  background: #ccc;
+		}
+
+		.book {
+		  transform-style: preserve-3d;
+		  position: relative;
+		  height: 300px;
+		  cursor: pointer;
+		  backface-visibility: visible;
+		}
+
+		.front, .back, .page_left, .page_right {
+		  transform-style: preserve-3d;
+		  position: absolute;
+		  width: 300px;
+		  height: 130%;
+		  top: 0; left: 0;
+		  transform-origin: left center;
+		  transition: transform .5s ease-in-out;
+		}
+		
+		.back{
+			background-color: 249, 250, 220;
+		}
+		.front, .page_left {
+		  border-bottom-right-radius: .5em;
+		  border-top-right-radius: .5em;
+		}
+
+		.back, .page_right {
+		  border-bottom-right-radius: .5em;
+		  border-top-right-radius: .5em;
+		}
+
+		.book:hover .front {
+		  transform: rotateY(-170deg) scale(1.1);
+		  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+		}
+
+
+		.book:hover .page_left {
+		  transform: rotateY(-160deg) scale(1.08);
+		}
+
+		.book:hover .page_right {
+		  transform: rotateY(-20deg) scale(1.08);
+		}
+
+		.book:hover .back {
+		  transform: rotateY(-10deg) scale(1.1);
+		}
+
+		.rotateimg180 {
+		  -webkit-transform:rotate(180deg);
+		  -moz-transform: rotate(180deg);
+		  -ms-transform: rotate(180deg);
+		  -o-transform: rotate(180deg);
+		  transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="book">
+	
+  		<div class="page_left">
+  			<img src = "page_left.jpg" width="290" height="380" class="rotateimg180">
+  		</div>
+  		<div class="page_right">
+  			<img src = "page_right.jpg" width = "300" height = "380">
+  		</div>
+
+  		
+  		<div class="back">
+  			<img src = "back.jpg" width = "300" height="390">
+  		</div>
+  	
+  		<div class="front">
+  			<img src = "front.png" width = "300" height="390">
+  		</div>
+	  		
+	  	<footer 
+		    style="bottom: 20px; right: 0; 
+		    display: flex; justify-content: flex-end;
+		    width: 220%;
+		    height: 200%; align-items: center;">
+		    <div style="text-align: right;
+		    line-height: 1.25; font-weight: bold;
+		    font-size: 18px">
+		        <span style="display: block;">[Tên đội: 303 || Lớp: 19H50303]</span>
+		    </div>
+		    <img style="width: 120px;
+		    height: auto;" src="https://iconclub.github.io/assets/iconLogo.png" alt="ICON">
+		</footer>
+
+	</div>
+
+	
+</body>
+	
+
+</html>
